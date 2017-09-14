@@ -42,7 +42,7 @@ jump in if you'd like to, or even ask us questions if something isn't clear.
 ##### Example
 
 ```javascript
-rm(target)
+rm(target, opts)
 ```
 
 #### <a name="link"></a> `> link(from, to, [opts]) -> Promise`
@@ -50,7 +50,7 @@ rm(target)
 ##### Example
 
 ```javascript
-link(from, to)
+link(from, to, opts)
 ```
 
 #### <a name="linkIfExists"></a> `> linkIfExists(from, to, [opts]) -> Promise`
@@ -58,5 +58,5 @@ link(from, to)
 ##### Example
 
 ```javascript
-linkIfExists(from, to)
+linkIfExists(from, to, opts)
 ```
