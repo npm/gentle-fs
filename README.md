@@ -25,7 +25,8 @@
 
 ### Features
 
-* TODO
+* Performs filesystem operations "gently". Please see details in the API specs below
+for a more precise definition of "gently".
 
 ### Contributing
 
@@ -39,6 +40,10 @@ jump in if you'd like to, or even ask us questions if something isn't clear.
 
 #### <a name="rm"></a> `> rm(target, [opts]) -> Promise`
 
+Will delete all directories between `target` and `opts.base`, as long as they are empty.
+That is, if `target` is `/a/b/c/d/e` and `base` is `/a/b`, but `/a/b/c` has other files
+besides the `d` directory inside of it, `/a/b/c` will remain.
+
 ##### Example
 
 ```javascript
@@ -47,6 +52,10 @@ rm(target, opts)
 
 #### <a name="link"></a> `> link(from, to, [opts]) -> Promise`
 
+If `from` is a real directory, and `from` is not the same directory as `to`, will
+symlink `from` to `to`, while also gently [`rm`](#rm)ing the `to` directory,
+returning a resolved Promise. Otherwise, will return a rejected Promise with an `Error`.
+
 ##### Example
 
 ```javascript
@@ -54,6 +63,9 @@ link(from, to, opts)
 ```
 
 #### <a name="linkIfExists"></a> `> linkIfExists(from, to, [opts]) -> Promise`
+
+Performs the same operation as [`link`](#link), except does nothing when `from` is the
+same as `to`, and returns a resolved promise in that case.
 
 ##### Example
 
