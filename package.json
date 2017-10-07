@@ -29,7 +29,6 @@
   "homepage": "https://github.com/npm/gentle-fs#readme",
   "dependencies": {
     "aproba": "^1.1.2",
-    "bluebird": "^3.5.0",
     "fs-vacuum": "^1.2.10",
     "graceful-fs": "^4.1.11",
     "iferr": "^0.1.5",

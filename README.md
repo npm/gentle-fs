@@ -38,7 +38,7 @@ jump in if you'd like to, or even ask us questions if something isn't clear.
 
 ### API
 
-#### <a name="rm"></a> `> rm(target, [opts]) -> Promise`
+#### <a name="rm"></a> `> rm(target, opts, cb)`
 
 Will delete all directories between `target` and `opts.base`, as long as they are empty.
 That is, if `target` is `/a/b/c/d/e` and `base` is `/a/b`, but `/a/b/c` has other files
@@ -47,28 +47,28 @@ besides the `d` directory inside of it, `/a/b/c` will remain.
 ##### Example
 
 ```javascript
-rm(target, opts)
+rm(target, opts, cb)
 ```
 
-#### <a name="link"></a> `> link(from, to, [opts]) -> Promise`
+#### <a name="link"></a> `> link(from, to, opts, cb)`
 
 If `from` is a real directory, and `from` is not the same directory as `to`, will
 symlink `from` to `to`, while also gently [`rm`](#rm)ing the `to` directory,
-returning a resolved Promise. Otherwise, will return a rejected Promise with an `Error`.
+and then call the callback. Otherwise, will call callback with an `Error`.
 
 ##### Example
 
 ```javascript
-link(from, to, opts)
+link(from, to, opts, cb)
 ```
 
-#### <a name="linkIfExists"></a> `> linkIfExists(from, to, [opts]) -> Promise`
+#### <a name="linkIfExists"></a> `> linkIfExists(from, to, opts, cb)`
 
 Performs the same operation as [`link`](#link), except does nothing when `from` is the
-same as `to`, and returns a resolved promise in that case.
+same as `to`, and calls the callback.
 
 ##### Example
 
 ```javascript
-linkIfExists(from, to, opts)
+linkIfExists(from, to, opts, cb)
 ```
