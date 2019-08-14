@@ -29,9 +29,11 @@
   "homepage": "https://github.com/npm/gentle-fs#readme",
   "dependencies": {
     "aproba": "^1.1.2",
+    "chownr": "^1.1.2",
     "fs-vacuum": "^1.2.10",
     "graceful-fs": "^4.1.11",
     "iferr": "^0.1.5",
+    "infer-owner": "^1.0.4",
     "mkdirp": "^0.5.1",
     "path-is-inside": "^1.0.2",
     "read-cmd-shim": "^1.0.1",
