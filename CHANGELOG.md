@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/npm/gentle-fs/compare/v2.1.0...v2.2.0) (2019-08-14)
+
+
+### Bug Fixes
+
+* don't chown if we didn't make any dirs ([c4df8a8](https://github.com/npm/gentle-fs/commit/c4df8a8))
+
+
+### Features
+
+* export mkdir method ([4891c09](https://github.com/npm/gentle-fs/commit/4891c09))
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/npm/gentle-fs/compare/v2.0.1...v2.1.0) (2019-08-14)
 
