@@ -6,6 +6,11 @@ var dezalgo = require('dezalgo')
 var mkdirp = require('mkdirp')
 var path = require('path')
 
+const log = {
+  silly: () => {},
+  verbose: () => {}
+}
+
 test('gently/force', function (t) {
   t.plan(5)
 
@@ -168,12 +173,14 @@ test('abs, noabs', function (t) {
 })
 
 function linkOk (t, msg, opts) {
+  opts.log = log
   testLink(opts, function (err) {
     t.ifError(err, msg)
   })
 }
 
 function linkNotOk (t, msg, opts) {
+  opts.log = log
   testLink(opts, function (err) {
     t.ok(err, msg)
   })
