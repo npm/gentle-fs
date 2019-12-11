@@ -6,9 +6,9 @@
   "scripts": {
     "prerelease": "npm t",
     "postrelease": "npm publish && git push --follow-tags",
-    "pretest": "standard",
+    "posttest": "standard",
     "release": "standard-version -s",
-    "test": "tap -J --nyc-arg=--all --coverage test/*.js test/**/*.js",
+    "test": "tap -J --nyc-arg=--all --coverage test",
     "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
     "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
   },
@@ -30,6 +30,7 @@
   "dependencies": {
     "aproba": "^1.1.2",
     "chownr": "^1.1.2",
+    "cmd-shim": "^3.0.3",
     "fs-vacuum": "^1.2.10",
     "graceful-fs": "^4.1.11",
     "iferr": "^0.1.5",
