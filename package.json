@@ -8,9 +8,7 @@
     "postrelease": "npm publish && git push --follow-tags",
     "posttest": "standard",
     "release": "standard-version -s",
-    "test": "tap -J --nyc-arg=--all --coverage test",
-    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
-    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+    "test": "tap -J --nyc-arg=--all --coverage test"
   },
   "repository": {
     "type": "git",
@@ -46,9 +44,7 @@
     "require-inject": "^1.4.2",
     "standard": "^10.0.3",
     "standard-version": "^4.2.0",
-    "tap": "^10.7.2",
-    "weallbehave": "^1.2.0",
-    "weallcontribute": "^1.0.8"
+    "tap": "^10.7.2"
   },
   "files": [
     "index.js",
