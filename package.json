@@ -1,6 +1,6 @@
 {
   "name": "gentle-fs",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Gentle Filesystem operations",
   "main": "index.js",
   "scripts": {
