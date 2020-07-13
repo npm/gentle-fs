@@ -43,7 +43,7 @@
     "nyc": "^11.1.0",
     "require-inject": "^1.4.2",
     "standard": "^10.0.3",
-    "standard-version": "^4.2.0",
+    "standard-version": "^8.0.1",
     "tap": "^10.7.2"
   },
   "files": [
